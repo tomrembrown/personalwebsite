@@ -1,108 +1,24 @@
 <template>
-  <div id="home">
-    <div class="home-wrapper container">
-      <div class="quote-wrapper">
-        <div class="quote">
-          <i class="fas fa-quote-left"></i>
-          {{quotation}}
-          <i class="fas fa-quote-right"></i>
-        </div>
-        <div class="attribute">{{person}}</div>
-      </div>
-    </div>
-    <div class="headliner-wrapper">
-      <div class="headliner">Queer Toronto</div>
-    </div>
-  </div>
+  <article id="content">
+    <h1>Welcome to My Site!</h1>
+    <section id="introduction">
+      <h2>Hi, I am Mr. Website!</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui pariatur in iure. Rem, aliquid, cumque. Id tenetur, facere aut odio dolores qui, iste sit voluptates ullam doloribus suscipit quasi obcaecati alias voluptatum error ab <a href="#">repellendus</a> deleniti ipsa quae sint! Nobis tempora cupiditate voluptate earum fuga laudantium vitae deleniti consectetur sapiente.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas possimus, et deleniti commodi sit, excepturi! Perspiciatis omnis aut impedit saepe consequatur quis dolores distinctio cumque aperiam velit repellendus dicta temporibus, a ducimus exercitationem, ratione harum quos voluptatem totam possimus eaque, porro quo voluptatum voluptates. Ducimus facere quod laborum, odit numquam amet. Ea sequi, harum neque, alias ratione iure blanditiis, accusamus reprehenderit impedit numquam libero suscipit voluptatibus enim. Exercitationem placeat, repellat.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, eius sapiente excepturi saepe vero maxime! Laborum quidem debitis labore quia magni tempore <a href="#">voluptatibus</a> omnis pariatur consectetur, molestiae nisi et ratione?</p>
+    </section>
+    <section id="promo">
+      <h2>Check Out My Work</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex omnis atque illo odio labore, debitis, qui quo? Odio similique illum eligendi distinctio repellendus quod inventore, aliquam modi, recusandae labore dignissimos aperiam expedita unde ea rem iusto magni ipsum nisi neque!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam eum quod et provident consectetur dolores, itaque quae <a href="#">dignissimos voluptatem</a>, accusamus, aut omnis ipsa quidem error magni facilis excepturi explicabo repudiandae. Velit beatae, facere magni. Odio obcaecati possimus reiciendis incidunt quo expedita quis ipsum quibusdam omnis, numquam beatae minima iure tenetur impedit totam ea esse deleniti eum? Minima maiores expedita, accusamus.</p>
+    </section>
+  </article>
 </template>
 
 <script>
-export default {
-  data() {
-    return {
-      quotation: "to put here",
-      person: "a person"
-    };
-  },
-  methods: {
-    getRandomQuotation: function() {
-      this.$http
-        .get("readRoutesServer/readRandomQuotation")
-        .then(function(response) {
-          this.quotation = response.data.quotation;
-          this.person = response.data.person;
-        });
-    }
-  },
-  beforeMount() {
-    this.getRandomQuotation();
-  }
-};
+
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 
-@import "/node_modules/@fortawesome/fontawesome-free/css/all.min.css";
-
-#home {
-  background-size: cover;
-  background-image: url("/img/queer-toronto-header-1.jpg");
-  background-position: 50% 50%;
-  width: 100%;
-  height: 500px;
-  position: relative;
-}
-
-#home:after {
-  position: absolute;
-  content: " ";
-  background-color: rgba(0, 0, 0, 0.05);
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  z-index: 5;
-}
-
-#home .home-wrapper {
-  position: relative;
-  height: 100%;
-}
-
-#home .home-wrapper {
-  position: absolute;
-  width: 30%;
-  top: 25px;
-  right: 25px;
-  z-index: 6;
-  color: #fff;
-  text-align: right;
-}
-
-#home .quote-wrapper .quote {
-  font-size: 1.2em;
-  margin-bottom: 10px;
-}
-
-#home .quote-wrapper .attribute {
-  font-weight: bold;
-}
-
-#home .quote-wrapper .attribute:before {
-  content: "- ";
-}
-
-#home .headliner-wrapper {
-  position: relative;
-  height: 100%;
-  z-index: 6;
-}
-
-#home .headliner-wrapper .headliner {
-  position: absolute;
-  bottom: 25px;
-  left: 25px;
-  font-size: 3em;
-  color: #fff;
-}
 </style>

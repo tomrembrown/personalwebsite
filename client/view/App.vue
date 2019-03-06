@@ -1,21 +1,37 @@
 <template>
   <div>
-    <qt-navbar></qt-navbar>
-    <router-view></router-view>
+    <tb-navbar></tb-navbar>
+
+    <div id="main" role="main">
+
+      <router-view></router-view>
+
+      <tb-sidebar></tb-sidebar>
+
+    </div>
+
+    <tb-footer></tb-footer>
+
   </div>
 </template>
 
 <script>
 
-  import Navbar from './templates/navbar/navbar.vue';
+  import Navbar from './templates/navbar.vue';
+  import Sidebar from './templates/sidebar.vue';
+  import Footer from './templates/footer.vue';
 
   export default {
     components: {
-      qtNavbar: Navbar
+      tbNavbar: Navbar,
+      tbSidebar: Sidebar,
+      tbFooter: Footer
     }
   }
 
 </script>
 
 <style lang="scss">
+  @import './scss/main.scss';
+
 </style>
