@@ -1,0 +1,27 @@
+{
+  "name": "tombrownwebsite",
+  "version": "1.0.0",
+  "description": "A personal website for Tom Brown",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tomrembrown/personalwebsite.git"
+  },
+  "keywords": [
+    "Tom",
+    "Brown",
+    "Personal",
+    "Website",
+    "Resume"
+  ],
+  "author": "Tom Brown <tom@tomrembrown.com> (www.tomrembrown.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tomrembrown/personalwebsite/issues"
+  },
+  "homepage": "https://github.com/tomrembrown/personalwebsite#readme"
+}

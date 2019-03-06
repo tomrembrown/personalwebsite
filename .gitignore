@@ -1,0 +1,26 @@
+# Ignore packages installed by npm
+node_modules/
+
+# Ignore files used by various IDEs
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Ignore the file created by the OSX systems
+.DS_Store
+
+# Ignore backup files
+*~
+*.bak
+
+# Ignore the build files created by webpack
+build/
+
+# Ignore log file
+npm-debug.log
+yarn-error.log
+
+# Ignore the environment parameters file - it will be different on prod vs. dev servers
+.env
