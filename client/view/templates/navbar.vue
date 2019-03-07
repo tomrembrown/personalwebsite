@@ -1,18 +1,28 @@
 <template>
   <header id="header">
-    <nav id="main-menu">
-      <ul>
-        <li><router-link class="nav-link" to="/" exact>Home</router-link></li>
-        <li><router-link class="nav-link" to="/about">About Me</router-link></li>
-        <li><router-link class="nav-link" to="/portfolio">Portfolio</router-link></li>
-        <li><router-link class="nav-link" to="/contact">Get in Touch</router-link></li>
-      </ul>
+    <nav class="navbar navbar-light navbar-expand-xl bg-light" id="main-menu">
+      <div class="container">
+        <span class="navbar-brand">
+          <img id="logo" src="img/Tom.jpg" alt="Picture of Tom Brown" width="30" height="30">
+        </span>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse">
+          <ul class="navbar-nav">
+            <li class="nav-item"><router-link class="nav-link" active-class="active" to="/" exact>Home</router-link></li>
+            <li class="nav-item"><router-link class="nav-link" active-class="active" to="/about">About Me</router-link></li>
+            <li class="nav-item"><router-link class="nav-link" active-class="active" to="/portfolio">Portfolio</router-link></li>
+            <li class="nav-item"><router-link class="nav-link" active-class="active" to="/contact">Get in Touch</router-link></li>
+          </ul>
+        </div>
+      </div>
     </nav>
-    <img id="logo" src="img/Tom.jpg" alt="Picture of Tom Brown">
   </header>
 </template>
 
 <script>
+  
 </script>
 
 <style lang="scss">
